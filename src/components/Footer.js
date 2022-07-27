@@ -15,7 +15,7 @@ function footer() {
       bgColor='black'
       color='white'
       p='50px 10px 10px 10px'
-      maxWidth='1440px'
+      
       align='center'
     >
       <Flex flexDir='column' justifyContent='space-between' m='5px'>
@@ -52,7 +52,7 @@ function footer() {
         flexDir='column'
         justifyContent='space-between'
         m='5px'
-        align={"center"}
+        align={['center','center',"end"]}
       >
         <Flex>
           <Icon

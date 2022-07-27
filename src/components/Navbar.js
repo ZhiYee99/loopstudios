@@ -19,16 +19,14 @@ import mobile_heroImage from "./images/mobile/image-hero.jpg";
 
 function Navbar() {
   let navigate = useNavigate();
-  const [display, changeDisplay] = useState(false);
-  const [open, setOpen] = useState(false);
-  const handleClick = () => {
-    setOpen(!open);
-  };
+  const [display, changeDisplay] = useState("none");
+  
+  
 
   return (
     <>
-      <Flex
-        maxWidth='1440px'
+      <Flex 
+     
         flexDir='column'
         justifyContent='space-between'
         bgImage={[
@@ -39,20 +37,17 @@ function Navbar() {
         ]}
         bgRepeat='no-repeat'
         h={["100vh", "100vh", "100vh", "75vh", "75vh"]}
+        backgroundSize="cover"
       >
-        <Flex>
-          <Flex
-            pos='absolute'
-            top='1rem'
-            left='1rem'
+        <Flex
             flexDir='row'
-            justifyContent='space-between'
-          >
-            <Image src={logo} />
-          </Flex>
+            justifyContent='space-between'>
+          
+            <Image src={logo} m='15px' h='auto' w={['50%','30%','auto','auto','auto']}/>
+          
           {/* Desktop */}
-          <Flex position='absolute' top='1rem' right='1rem' align='center'>
-            <Flex display={["none", "none", "none", "flex"]} color='white'>
+          <Flex align='center'>
+            <Flex display={["none", "none", "none", "flex"]} color='white' m='15px'>
               <Link
                 to='#'
                 fontFamily='sans-serif'

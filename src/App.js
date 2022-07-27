@@ -3,16 +3,20 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Swiper from "./components/Swiper";
 
+import Home from "./components/pages/Home";
+import { Flex, Spacer } from "@chakra-ui/react";
 
 
 function App() {
   return (
-    <Router>
+    <Router> 
+      <Flex flexDir={'column'} justifyContent='space-between'>
       <Navbar/>
-      <Swiper/>
-      <Footer/>
+      
+      <Home/>
+      
+      <Footer/></Flex>
     </Router>
   );
 }

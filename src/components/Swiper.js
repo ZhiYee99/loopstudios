@@ -1,6 +1,12 @@
 import React from "react";
 import { Image, Button, Text, Flex } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination,Navigation,Mousewheel, Keyboard  } from "swiper";
+import "./style.css";
 import img1 from "./images/desktop/image-curiosity.jpg";
 import img2 from "./images/desktop/image-deep-earth.jpg";
 import img3 from "./images/desktop/image-fisheye.jpg";
@@ -12,11 +18,39 @@ import img8 from "./images/desktop/image-soccer-team.jpg";
 
 function swiper() {
   return (
-    <Flex>
-      <Text>OUR CREATIONS</Text>
+    <Flex flexDir={'column' }>
+      <Flex flexDir={['column','column','row']} justifyContent='space-between' m='10px'>
+      <Text fontSize='3xl'>OUR CREATIONS</Text>
       <Button>SEE ALL</Button>
-
-      <Swiper spaceBetween={5} slidesPerView={4}>
+      </Flex>
+      <Swiper 
+              cssMode={true}
+        navigation={true}
+        pagination={true}
+        mousewheel={true}
+        keyboard={true}
+        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+              className="mySwiper"
+              breakpoints={{
+                640: {
+                  
+                  slidesPerView: 1,
+                  spaceBetween:1
+                },
+                
+                768: {
+                  
+                  slidesPerView: 2,
+                  spaceBetween:3
+                },
+                1024: {
+                  
+                  slidesPerView: 4,
+                  spaceBetween:5
+                },
+               
+            }}
+      >
         <SwiperSlide>
           <Image src={img1} />
         </SwiperSlide>
@@ -45,5 +79,5 @@ function swiper() {
     </Flex>
   );
 }
-
+ 
 export default swiper;
