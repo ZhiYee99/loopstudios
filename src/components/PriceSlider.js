@@ -4,7 +4,7 @@ import {
   SliderTrack,
   SliderFilledTrack,
   SliderThumb,
-  SliderMark, Tooltip, Box, Flex, Switch, Badge, Text, Divider, Button,
+  Tooltip, Box, Flex, Switch, Badge, Text, Divider, Button,
 } from '@chakra-ui/react';
 import {BsArrowLeftRight} from 'react-icons/bs';
 import {CheckIcon} from '@chakra-ui/icons';
@@ -45,8 +45,8 @@ function PriceSlider() {
         isOpen={showTooltip}
         label={`$ ${sliderValue}`}
       >
-        <SliderThumb  /> 
-        {/* as={BsArrowLeftRight} boxSize={6} color='teal' p='5px' */}
+        <SliderThumb as={BsArrowLeftRight} boxSize={6} color='teal' p='5px' /> 
+        
       </Tooltip>
     </Slider>
     <Flex display={['flex','flex','none']} m='30px' >

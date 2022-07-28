@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Text, Flex, Switch, Badge, Divider, Button, } from '@chakra-ui/react'
+import { Box, Text, } from '@chakra-ui/react'
 import PriceSlider from '../PriceSlider';
 
 

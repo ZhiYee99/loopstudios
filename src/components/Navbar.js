@@ -1,25 +1,25 @@
 import React, { useState } from "react";
 import {
   Image,
-  Button,
+
   Box,
   Flex,
   Link,
   Icon,
   Text,
-  Spacer,
+
 } from "@chakra-ui/react";
 
-import { useNavigate } from "react-router-dom";
+
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 import logo from "./images/logo.svg";
 import heroImage from "./images/desktop/image-hero.jpg";
 import mobile_heroImage from "./images/mobile/image-hero.jpg";
-import Products from "./pages/Products";
+
 
 function Navbar() {
-  let navigate = useNavigate();
+ 
   const [display, changeDisplay] = useState("none");
   
   
