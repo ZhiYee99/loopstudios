@@ -73,7 +73,7 @@ function swiper() {
           <Image src={img8} />
         </SwiperSlide>
       </Swiper>
-      <Button display={['block','block','block','none','none']} m='10px' w='150px' justifyContent='center' >SEE ALL</Button>
+      <Button display={['block','block','block','none','none']} m='10px' w='150px' alignSelf='center' >SEE ALL</Button>
     </Flex>
   );
 }

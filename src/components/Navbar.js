@@ -6,7 +6,7 @@ import {
   Link,
   Icon,
   Text,
-Menu, MenuItem
+
 } from "@chakra-ui/react";
 
 
@@ -184,7 +184,7 @@ function Navbar() {
               >
                 Support
               </Link>
-              <Link as={Link}
+              <Link 
                 to='/products'
                 fontFamily='sans-serif'
                 fontStyle='OpenSans'
