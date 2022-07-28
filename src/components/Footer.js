@@ -18,7 +18,7 @@ function footer() {
       
       align='center'
     >
-      <Flex flexDir='column' justifyContent='space-between' m='5px'>
+      <Flex flexDir='column' justifyContent='space-between' m='5px' ml={['','','100px']}>
         <Image
           src={logo}
           h='auto'
@@ -51,7 +51,7 @@ function footer() {
       <Flex
         flexDir='column'
         justifyContent='space-between'
-        m='5px'
+        m='5px' mr={['','','100px']}
         align={['center','center',"end"]}
       >
         <Flex>

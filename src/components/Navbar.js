@@ -16,6 +16,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import logo from "./images/logo.svg";
 import heroImage from "./images/desktop/image-hero.jpg";
 import mobile_heroImage from "./images/mobile/image-hero.jpg";
+import Products from "./pages/Products";
 
 function Navbar() {
   let navigate = useNavigate();
@@ -43,7 +44,7 @@ function Navbar() {
             flexDir='row'
             justifyContent='space-between'>
           
-            <Image src={logo} m='15px' h='auto' w={['50%','30%','auto','auto','auto']}/>
+            <Image src={logo} to='/' m='15px' h='auto' w={['50%','30%','auto','auto','auto']}/>
           
           {/* Desktop */}
           <Flex align='center'>
@@ -86,8 +87,8 @@ function Navbar() {
               >
                 Support
               </Link>
-              <Link
-                to='#'
+              <Link as={Link}
+                to='/products'
                 fontFamily='sans-serif'
                 fontStyle='OpenSans'
                 m='8px'
@@ -175,8 +176,8 @@ function Navbar() {
               >
                 Support
               </Link>
-              <Link
-                to='#'
+              <Link as={Link}
+                to='/products'
                 fontFamily='sans-serif'
                 fontStyle='OpenSans'
                 m='8px'
@@ -188,23 +189,22 @@ function Navbar() {
           </Flex>
         </Flex>
 
-        <Flex>
+        <Box justifyContent={['center','center','left']}>
           <Text
             color='white'
-            p='10px'
-            border='3px white solid'
+            m='40px' 
+            border='3px white solid' 
             fontSize={["4xl", "5xl", "6xl", "6xl", "6xl"]}
             h={["25vh", "30vh", "35vh", "35vh", "35vh"]}
             w={["85vw", "65vw", "55vw", "45vw", "35vw"]}
             fontWeight='thin'
-            left={["1rem", "3rem", "10rem", "10rem", "10rem"]}
-            bottom={["17rem", "15rem", "15rem", "7rem", "7rem"]}
-            position='relative'
+            p='10px'
+            position='static'
             alignContent={["center", "center", "center", "left", "left"]}
           >
             IMMERSIVE EXPERIENCES THAT DELIVER
           </Text>
-        </Flex>
+        </Box>
       </Flex>
     </>
   );

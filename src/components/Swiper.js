@@ -18,38 +18,35 @@ import img8 from "./images/desktop/image-soccer-team.jpg";
 
 function swiper() {
   return (
-    <Flex flexDir={'column' }>
+    <Flex flexDir={'column'} m={['50px','50px','50px 100px']}>
       <Flex flexDir={['column','column','row']} justifyContent='space-between' m='10px'>
-      <Text fontSize='3xl'>OUR CREATIONS</Text>
-      <Button>SEE ALL</Button>
+      <Text fontSize={['xl','2xl','3xl']} textAlign={['center','center','initial']}>OUR CREATIONS</Text>
+      <Button display={['none','none','none','block','block']} >SEE ALL</Button>
       </Flex>
       <Swiper 
-              cssMode={true}
+        cssMode={true}
         navigation={true}
         pagination={true}
         mousewheel={true}
         keyboard={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-              className="mySwiper"
-              breakpoints={{
-                640: {
-                  
-                  slidesPerView: 1,
-                  spaceBetween:1
-                },
+        
+        className="mySwiper"
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween:1
+          },
                 
-                768: {
-                  
-                  slidesPerView: 2,
-                  spaceBetween:3
-                },
-                1024: {
-                  
-                  slidesPerView: 4,
-                  spaceBetween:5
-                },
-               
-            }}
+          768: {
+            slidesPerView: 2,
+            spaceBetween:3
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween:5
+          },
+        }}
       >
         <SwiperSlide>
           <Image src={img1} />
@@ -76,6 +73,7 @@ function swiper() {
           <Image src={img8} />
         </SwiperSlide>
       </Swiper>
+      <Button display={['block','block','block','none','none']} m='10px' w='150px' justifyContent='center' >SEE ALL</Button>
     </Flex>
   );
 }
