@@ -13,7 +13,7 @@ function PriceSlider() {
   const [sliderValue, setSliderValue] = useState(16)
   const [showTooltip, setShowTooltip] = useState(false)
   return (
-    <Box m='50px'>
+    <Box m='100px'>
     <Flex m='40px 5px' flexDir={'row'} justifyContent='space-between' >
       <Text textAlign={['center','center','center','initial','initial']} alignSelf='center'>100K PAGEVIEWS</Text>
       <Flex display={['none','none','flex']}>

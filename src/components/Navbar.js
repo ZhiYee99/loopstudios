@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import {
   Image,
-
   Box,
   Flex,
   Link,
   Icon,
   Text,
-
+Menu, MenuItem
 } from "@chakra-ui/react";
 
 
@@ -49,15 +48,19 @@ function Navbar() {
           {/* Desktop */}
           <Flex align='center'>
             <Flex display={["none", "none", "none", "flex"]} color='white' m='15px'>
-              <Link
-                to='#'
-                fontFamily='sans-serif'
-                fontStyle='OpenSans'
-                m='8px'
-                w='100%'
-              >
-                About
-              </Link>
+             
+                
+                  <Link
+                  to='#'
+                  fontFamily='sans-serif'
+                  fontStyle='OpenSans'
+                  m='8px'
+                  w='100%'
+                >
+                    About
+                  </Link>
+                
+              
 
               <Link
                 to='#'
@@ -68,7 +71,7 @@ function Navbar() {
               >
                 Careers
               </Link>
-
+              
               <Link
                 to='#'
                 fontFamily='sans-serif'
@@ -78,6 +81,7 @@ function Navbar() {
               >
                 Events
               </Link>
+              
               <Link
                 to='#'
                 fontFamily='sans-serif'
@@ -87,7 +91,9 @@ function Navbar() {
               >
                 Support
               </Link>
-              <Link as={Link}
+              
+              
+              <Link
                 to='/products'
                 fontFamily='sans-serif'
                 fontStyle='OpenSans'
@@ -96,6 +102,7 @@ function Navbar() {
               >
                 Products
               </Link>
+              
             </Flex>
 
             {/* Mobile */}
@@ -110,6 +117,7 @@ function Navbar() {
               color='white'
               fontSize={["20px", "25px", "25px"]}
             />
+           
           </Flex>
 
           {/* Mobile Content */}
